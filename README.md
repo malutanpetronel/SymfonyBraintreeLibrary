@@ -13,7 +13,7 @@ Symfony 3 Bundle for Braintree's PHP client library, Symfony 3  latest Braintree
 Drag and drop the **src/AppBundle/Libraries/BrainTreeLibrary.php** , **app/config/services.yml**,**app/config/parameters.yml** and **composer.json** in root folder, files into your application's directories. To config your `braintree_environment ,braintree_merchantid, braintree_publickey,braintree_privateKey` in ` parameters.yml`. 
 
 
-#### Important note : if you are not using ant or composer.json , directly  Drag and drop the iles into your application's directories
+#### Important note : if you are not using ant or composer.json , directly  Drag and drop the files into your application's directories
 
 ## Testing 
 
