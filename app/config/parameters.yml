@@ -1,0 +1,17 @@
+# This file is auto-generated during the composer install
+parameters:
+    database_host: ''
+    database_port: ''
+    database_name: ''
+    database_user: root
+    database_password: null
+    mailer_transport: smtp
+    mailer_host: ''
+    mailer_user: ''
+    mailer_password: null
+    secret: ThisTokenIsNotSoSecretChangeIt
+    braintree_environment: sandbox
+    braintree_merchantid: ''
+    braintree_publickey: ''
+    braintree_privateKey: ''
+   
