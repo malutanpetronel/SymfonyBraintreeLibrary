@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Symfonybraintreelibrary by rajathavalam</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">Symfonybraintreelibrary</h1>
+      <h2 class="project-tagline">Symfony 3 Bundle for Braintree&#39;s PHP client library, Symfony 3  latest Braintree Library</h2>
+      <a href="https://github.com/rajathavalam/SymfonyBraintreeLibrary" class="btn">View on GitHub</a>
+      <a href="https://github.com/rajathavalam/SymfonyBraintreeLibrary/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/rajathavalam/SymfonyBraintreeLibrary/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
+
+    <section class="main-content">
+      <h1>
+<a id="symfonybraintreelibrary" class="anchor" href="#symfonybraintreelibrary" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>SymfonyBraintreeLibrary</h1>
+
+<p>Symfony 3 Bundle for Braintree's PHP client library, Symfony 3  latest Braintree Library</p>
+
+<h2>
+<a id="requirements" class="anchor" href="#requirements" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Requirements</h2>
+
+<ol>
+<li>PHP 5.4 or greater</li>
+<li>Symfony 3.0+</li>
+<li>Braintree Server SDK</li>
+<li>Braintree sandbox account</li>
+</ol>
+
+<h2>
+<a id="installation" class="anchor" href="#installation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Installation</h2>
+
+<p>Drag and drop the <strong>src/AppBundle/Libraries/BrainTreeLibrary.php</strong> , <strong>app/config/services.yml</strong>,<strong>app/config/parameters.yml</strong> and <strong>composer.json</strong> in root folder, files into your application's directories. To config your <code>braintree_environment ,braintree_merchantid, braintree_publickey,braintree_privateKey</code> in <code>parameters.yml</code>. </p>
+
+<h4>
+<a id="important-note--if-you-are-not-using-ant-or-composerjson--directly--drag-and-drop-the-files-into-your-applications-directories" class="anchor" href="#important-note--if-you-are-not-using-ant-or-composerjson--directly--drag-and-drop-the-files-into-your-applications-directories" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Important note : if you are not using ant or composer.json , directly  Drag and drop the files into your application's directories</h4>
+
+<h2>
+<a id="testing" class="anchor" href="#testing" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Testing</h2>
+
+<p>Please check the BrainTreeController in your <strong>src/AppBundle/Controller/BrainTreeController.php</strong> </p>
+
+<h4>
+<a id="create-customer-braintreecreate_customeruseridisobject" class="anchor" href="#create-customer-braintreecreate_customeruseridisobject" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Create customer: /braintree/create_customer/{userId}/{isObject}</h4>
+
+<p>{userId} : Your custom user ID
+{isObject} : boolean true or false</p>
+
+<p>example : baseurl/braintree/create_customer/123/true
+          baseurl/braintree/create_customer</p>
+
+<h4>
+<a id="customer-delete-braintreecustomer_deleteuseridisobject" class="anchor" href="#customer-delete-braintreecustomer_deleteuseridisobject" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Customer delete: /braintree/customer_delete/{userId}/{isObject}</h4>
+
+<p>example : baseurl/braintree/create_customer/123/true</p>
+
+<h4>
+<a id="customer-find-braintreecustomer_finduseridisobject" class="anchor" href="#customer-find-braintreecustomer_finduseridisobject" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Customer find: /braintree/customer_find/{userId}/{isObject}</h4>
+
+<p>example : baseurl/braintree/customer_find/123/true</p>
+
+<h4>
+<a id="customer-find-braintreecustomer_updateuseridisobject" class="anchor" href="#customer-find-braintreecustomer_updateuseridisobject" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Customer find: /braintree/customer_update/{userId}/{isObject}</h4>
+
+<p>example : baseurl/braintree/customer_update/123/true</p>
+
+<h4>
+<a id="create-customer-with-cridit-card-and-address-braintreecreate_customer_with_cc_adrsuseridisobject" class="anchor" href="#create-customer-with-cridit-card-and-address-braintreecreate_customer_with_cc_adrsuseridisobject" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Create Customer with Cridit Card and Address: /braintree/create_customer_with_cc_adrs/{userId}/{isObject}</h4>
+
+<p>example : baseurl/braintree/create_customer_with_cc_adrs/123/true</p>
+
+<h4>
+<a id="update-customer-with-cridit-card-and-address-braintreeupdate_customer_with_cc_adrsuseridpaymenttokenisobject" class="anchor" href="#update-customer-with-cridit-card-and-address-braintreeupdate_customer_with_cc_adrsuseridpaymenttokenisobject" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Update Customer with Cridit Card and Address: /braintree/update_customer_with_cc_adrs/{userId}/{paymentToken}/{isObject}</h4>
+
+<p>example : baseurl/braintree/update_customer_with_cc_adrs/123/token/true</p>
+
+<h4>
+<a id="create-cridit-card-braintreecreate_cridit_carduseridisobject" class="anchor" href="#create-cridit-card-braintreecreate_cridit_carduseridisobject" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Create cridit Card: /braintree/create_cridit_card/{userId}/{isObject}</h4>
+
+<p>example : baseurl/braintree/create_cridit_card/123/true</p>
+
+<h4>
+<a id="edit-cridit-card-braintreeedit_cridit_cardcriditcardtokenisobject" class="anchor" href="#edit-cridit-card-braintreeedit_cridit_cardcriditcardtokenisobject" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Edit cridit Card: /braintree/edit_cridit_card/{criditCardToken}/{isObject}</h4>
+
+<p>example : baseurl/braintree/criditCardToken/token/true</p>
+
+<h4>
+<a id="find-cridit-card-braintreefind_cridit_cardcriditcardtokenisobject" class="anchor" href="#find-cridit-card-braintreefind_cridit_cardcriditcardtokenisobject" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Find cridit Card: /braintree/find_cridit_card/{criditCardToken}/{isObject}</h4>
+
+<p>example : baseurl/braintree/find_cridit_card/token/true</p>
+
+<h4>
+<a id="find-cridit-card-braintreedelete_cridit_cardcriditcardtokenisobject" class="anchor" href="#find-cridit-card-braintreedelete_cridit_cardcriditcardtokenisobject" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Find cridit Card: /braintree/delete_cridit_card/{criditCardToken}/{isObject}</h4>
+
+<p>example : baseurl/braintree/delete_cridit_card/token/true</p>
+
+<h4>
+<a id="create-subcripiton--braintreesubcripiton_createcriditcardtokenplanidsubscriptionidisobject" class="anchor" href="#create-subcripiton--braintreesubcripiton_createcriditcardtokenplanidsubscriptionidisobject" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Create Subcripiton : /braintree/subcripiton_create/{criditCardToken}/{planId}/{subscriptionID}/{isObject}</h4>
+
+<p>example : /braintree/subcripiton_create/token/1/1/true</p>
+
+<h4>
+<a id="create-subcripiton-with-full-features--braintreesubcripiton_create_full_examplecriditcardtokenisobject" class="anchor" href="#create-subcripiton-with-full-features--braintreesubcripiton_create_full_examplecriditcardtokenisobject" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Create Subcripiton with full features : /braintree/subcripiton_create_full_example/{criditCardToken}/{isObject}</h4>
+
+<p>example : /braintree/subcripiton_create_full_example/token/1/true</p>
+
+<h4>
+<a id="canel-subcripiton--braintreesubcripiton_cancelsubscriptionidisobject" class="anchor" href="#canel-subcripiton--braintreesubcripiton_cancelsubscriptionidisobject" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Canel Subcripiton : /braintree/subcripiton_cancel/{subscriptionID}/{isObject}</h4>
+
+<p>example : /braintree/subcripiton_cancel/token/1/true</p>
+
+<h4>
+<a id="update-subcripiton--braintreesubcripiton_updatesubscriptionidisobject" class="anchor" href="#update-subcripiton--braintreesubcripiton_updatesubscriptionidisobject" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Update Subcripiton : /braintree/subcripiton_update/{subscriptionID}/{isObject}</h4>
+
+<p>example : /braintree/subcripiton_update/token/123/true</p>
+
+<h4>
+<a id="find-subcripiton--braintreesubcripiton_findsubscriptionidisobject" class="anchor" href="#find-subcripiton--braintreesubcripiton_findsubscriptionidisobject" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Find Subcripiton : /braintree/subcripiton_find/{subscriptionID}/{isObject}</h4>
+
+<p>example : /braintree/subcripiton_find/token/123/true</p>
+
+<h4>
+<a id="retry-charge--braintreeretry_chargesubscriptionidsubscritpionamountisobject" class="anchor" href="#retry-charge--braintreeretry_chargesubscriptionidsubscritpionamountisobject" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>retry charge : /braintree/retry_charge/{subscriptionID}/{subscritpionAmount}/{isObject}</h4>
+
+<h4>
+<a id="user-transcations-braintreeget_user_subscription_transcationsuseridisobject" class="anchor" href="#user-transcations-braintreeget_user_subscription_transcationsuseridisobject" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>User Transcations :/braintree/get_user_subscription_transcations/{userId}/{isObject}</h4>
+
+<p>example : /braintree/get_user_subscription_transcations/123/true</p>
+
+<h4>
+<a id="user-transcations-historybraintreeget_user_subscription_historyuseridisobject" class="anchor" href="#user-transcations-historybraintreeget_user_subscription_historyuseridisobject" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>User Transcations History:/braintree/get_user_subscription_history/{userId}/{isObject}</h4>
+
+<p>example : /braintree/get_user_subscription_history/123/true</p>
+
+<h4>
+<a id="createadd-transcationsbraintreeadd_transcationcriditcardtokenisobject" class="anchor" href="#createadd-transcationsbraintreeadd_transcationcriditcardtokenisobject" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Create/Add Transcations:/braintree/add_transcation/{criditCardToken}/{isObject}</h4>
+
+<p>example : /braintree/add_transcation/toekn/true</p>
+
+<h4>
+<a id="createadd-transcations-with-user-id-braintreeadd_transcation_with_consumerconsumeridisobject" class="anchor" href="#createadd-transcations-with-user-id-braintreeadd_transcation_with_consumerconsumeridisobject" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Create/Add Transcations With User ID :/braintree/add_transcation_with_consumer/{consumerID}/{isObject}</h4>
+
+<p>example : /braintree/add_transcation_with_consumer/123/true</p>
+
+<h4>
+<a id="transcations-settlement--braintreetranscation_settlementtranscationidisobject" class="anchor" href="#transcations-settlement--braintreetranscation_settlementtranscationidisobject" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Transcations Settlement : /braintree/transcation_settlement/{transcationID}/{isObject}</h4>
+
+<h4>
+<a id="cancel-transcations--braintreetranscation_canceltranscationidisobject" class="anchor" href="#cancel-transcations--braintreetranscation_canceltranscationidisobject" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Cancel Transcations  :/braintree/transcation_cancel/{transcationID}/{isObject}</h4>
+
+<p>example : /braintree/transcation_cancel/123/true</p>
+
+<h4>
+<a id="refund-transcations--braintreetranscation_refundtranscationidisobject" class="anchor" href="#refund-transcations--braintreetranscation_refundtranscationidisobject" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Refund Transcations  :/braintree/transcation_refund/{transcationID}/{isObject}</h4>
+
+<p>example : /braintree/transcation_refund/123/true</p>
+
+<h4>
+<a id="find-transcation--braintreetranscation_findtranscationidisobject" class="anchor" href="#find-transcation--braintreetranscation_findtranscationidisobject" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Find Transcation  :/braintree/transcation_find/{transcationID}/{isObject}</h4>
+
+<p>example : /braintree/transcation_find/123/true</p>
+
+<h4>
+<a id="settlement-batch-summary--braintreesettlement_batch_summarydateisobject" class="anchor" href="#settlement-batch-summary--braintreesettlement_batch_summarydateisobject" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>settlement batch summary  :/braintree/settlement_batch_summary/{date}/{isObject}</h4>
+
+<h4>
+<a id="discounts--braintreediscounts" class="anchor" href="#discounts--braintreediscounts" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Discounts  :/braintree/discounts</h4>
+
+<h4>
+<a id="plans--braintreeplans" class="anchor" href="#plans--braintreeplans" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Plans  :/braintree/plans</h4>
+
+<h4>
+<a id="user-transcation-list--braintreeuser_transcation_listconsumerid" class="anchor" href="#user-transcation-list--braintreeuser_transcation_listconsumerid" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>user transcation list  :/braintree/user_transcation_list/{consumerID}</h4>
+
+<h4>
+<a id="all-transcations-braintreetranscation_list" class="anchor" href="#all-transcations-braintreetranscation_list" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>All Transcations :/braintree/transcation_list</h4>
+
+<h4>
+<a id="all-subscripitons-braintreesubscripitons" class="anchor" href="#all-subscripitons-braintreesubscripitons" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>All subscripitons :/braintree/subscripitons</h4>
+
+<h4>
+<a id="all-customers-braintreecustomers" class="anchor" href="#all-customers-braintreecustomers" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>All customers :/braintree/customers</h4>
+
+<h4>
+<a id="offical-symfony-documentation" class="anchor" href="#offical-symfony-documentation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Offical Symfony Documentation</h4>
+
+<p><a href="http://symfony.com/">http://symfony.com/</a></p>
+
+<h4>
+<a id="offical-braintree-documentation" class="anchor" href="#offical-braintree-documentation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Offical Braintree Documentation</h4>
+
+<p><a href="https://developers.braintreepayments.com/start/overview">https://developers.braintreepayments.com/start/overview</a></p>
+
+<h2>
+<a id="helpassistance" class="anchor" href="#helpassistance" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Help/Assistance</h2>
+
+<p>Email Us : <a href="mailto:rajaram.tavalam@gmail.com">rajaram.tavalam@gmail.com</a><br>
+Contact US :  +91-7386249801</p>
+
+<h2>
+<a id="license" class="anchor" href="#license" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>License</h2>
+
+<p><a href="LICENSE">MIT</a></p>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/rajathavalam/SymfonyBraintreeLibrary">Symfonybraintreelibrary</a> is maintained by <a href="https://github.com/rajathavalam">rajathavalam</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+  
+  </body>
+</html>
